@@ -23,8 +23,17 @@ read_globals = {
 	"tracy",
 
 	string = {fields = {"split", "trim"}},
-	table  = {fields = {"copy", "copy_with_metatables", "getn", "indexof", "keyof", "insert_all", "shuffle"}},
-	math   = {fields = {"hypot", "round", "isfinite"}},
+	table  = {fields = {
+		"copy",
+		"copy_with_metatables",
+		"getn",
+		"indexof",
+		"keyof",
+		"insert_all",
+		"shuffle",
+		"merge",
+	}},
+	math   = {fields = {"hypot", "round"}},
 }
 
 globals = {
@@ -42,12 +51,6 @@ stds.menu_common = {
 }
 
 files["builtin/client/init.lua"] = {
-	globals = {
-		debug = {fields={"getinfo"}},
-	}
-}
-
-files["builtin/sscsm_client/init.lua"] = {
 	globals = {
 		debug = {fields={"getinfo"}},
 	}
